@@ -19,21 +19,38 @@ def slash_space():
 def slash():
     print('|')
 
-def first_line():
+def first_line_by2():
     do_twice(plus_minus_space)
     plus()
 
-def second_line():
+def second_line_by2():
     do_twice(slash_space)
     slash()
 
-def grid():
-    first_line()
-    do_four(second_line)
+def grid_by2():
+    first_line_by2()
+    do_four(second_line_by2)
 
-def draw_grid():
-    do_twice(grid)
-    first_line()
+def draw_grid_by2():
+    do_twice(grid_by2)
+    first_line_by2()
+
+def first_line_by4():
+    do_four(plus_minus_space)
+    plus()
+
+def second_line_by4():
+    do_four(slash_space)
+    slash()
+
+def grid_by4():
+    first_line_by4()
+    do_four(second_line_by4)
+
+def draw_grid_by4():
+    do_four(grid_by4)
+    first_line_by4()
 
 
-draw_grid()
+draw_grid_by2()
+draw_grid_by4()
