@@ -21,8 +21,22 @@ def pie(t, n, length):
 def draw_pie(t, n, length):
     pie(t, n, length)
 
+def move(t, length):
+    t.pu()
+    t.fd(length)
+    t.pd()
+
+
 bob = turtle.Turtle()
-draw_pie(bob, 5, 40)
+
+move(bob, -150)
+draw_pie(bob, 5, 60)
+
+move(bob, 150)
+draw_pie(bob, 6, 60)
+
+move(bob, 150)
+draw_pie(bob, 7, 60)
 
 bob.hideturtle()
 turtle.mainloop()
