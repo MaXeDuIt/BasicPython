@@ -25,24 +25,21 @@ def flower(t, n, r, angle):
         petal(t, r, angle)
         t.lt(float(360 / n))
 
-
+def move(t, length):
+    t.pu()
+    t.fd(length)
+    t.pd()
 
 
 bob = turtle.Turtle()
-bob.pu()
-bob.fd(-200)
-bob.pd()
+move(bob, -250)
 flower(bob, 7, 100, 60)
 
-bob.pu()
-bob.fd(200)
-bob.pd()
-flower(bob, 10, 75, 75)
+move(bob, 250)
+flower(bob, 10, 80, 80)
 
-bob.pu()
-bob.fd(200)
-bob.pd()
-flower(bob, 20, 130, 25)
+move(bob, 250)
+flower(bob, 20, 160, 20)
 
 bob.hideturtle()
 turtle.mainloop()
