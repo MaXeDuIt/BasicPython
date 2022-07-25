@@ -1,12 +1,13 @@
 
-import turtle
+import turtle, math
 
 
 def triangle(t, length, angle):
+    new_length = length * math.sin(angle * math.pi / 180)
     t.rt(angle)
     t.fd(length)
     t.lt(90 + angle)
-    t.fd(2 * length)
+    t.fd(2 * new_length)
     t.lt(90 + angle)
     t.fd(length)
     t.lt(180 - angle)
